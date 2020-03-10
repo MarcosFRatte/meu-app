@@ -10,4 +10,9 @@ class LivroController extends Controller
     {
      return view('livro', compact('livro'));
     }
+
+    public function criar()
+    {
+     return view('criar');
+    }
 }
