@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
+    <title>Cadastro de Livros</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<form>
-  <div class="form-group" id="form">
-    <label for="exampleFormControlInput1">Título</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Título da obra">
-    <br>
-    <label for="exampleFormControlInput1">Autor</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome do Autor">
-    <br>
-    <label for="exampleFormControlInput1">ISBN</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Código ISBN">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Procedência</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Nacional</option>
-      <option>Internacional</option>
+<h1>Cadastro de livros </h1>
+<form method="POST">
+@csrf
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+  
+      <div class="form-group" id="form">
+        <label for="exampleFormControlInput1">Título</label>
+        <input name="titulo"type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título da obra">
+        <br>
+        <label for="exampleFormControlInput1">Autor</label>
+        <input name="autor"type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do Autor">
+        <br>
+        <label for="exampleFormControlInput1">ISBN</label>
+        <input name="isbn" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Código ISBN">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Procedência</label>
+        <select name="procedencia" class="form-control" id="procedencia">
+        <option>Nacional</option>
+        <option>Internacional</option>
      
-    </select>
+        </select>
+        </br>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar </button>
+     
+    </div>
   </div>
+</div>
 
 </form>  
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
