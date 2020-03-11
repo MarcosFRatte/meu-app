@@ -7,6 +7,16 @@
 
 </head>
 <body>
- Livro: {{$livro}}   
+<a href="/livro/criar"> Novo Livro</a>
+
+Livros recebidos: <br>
+
+@foreach($livros as $livro)
+
+{{ $livro->titulo }} <br>
+{{ $livro->autor}} <br>
+
+@endforeach
+
 </body>
 </html>

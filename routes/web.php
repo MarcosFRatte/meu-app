@@ -6,4 +6,4 @@ Route::get('/livro/criar', 'LivroController@criar');
 
 Route::post('/livro/criar', 'LivroController@salvar');
 
-Route::get('/{livro}', 'LivroController@listar');
+Route::get('/', 'LivroController@listar');
